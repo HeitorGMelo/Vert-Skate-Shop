@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vert Skate Shop - Front-end Concept</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!--home-->
+    <section id="home">
+        <header id="header">
+            <img src="src/logo.svg" alt="logo da marca" id="headerLogo">
+            <img src="src/shopIcon.svg" id="shopIcon" class="icon" onclick="indisponivel()">
+        </header>
+
+        <section id="heroSection">
+            <div id="headline">
+                <h1 id="headlineTitulo">
+                    Vert, sua vida mais <strong style="color: red;">radical</strong>
+                </h1>
+                <div class="homeButtons">
+                    <button class="headlineButtons">
+                        <a href="#store">COMPRAR AGORA</a>
+                    </button>
+                    <button class="headlineButtons">
+                        <a href="#galeria">VEJA EM AÇÃO</a>
+                    </button>
+                </div>
+            </div>
+
+            <div id="skate3dPai">
+                <model-viewer 
+                auto-rotate 
+                rotation-per-second="2.5rad" 
+                src="skateboard.glb" 
+                alt="Skate 3d" 
+                id="skate"></model-viewer>
+
+            </div>
+        </section>
+    </section>
+
+
+    <!--Store section-->
+    <section id="store">
+    <!--cabeçalho store-->
+        <div id="storeChild">
+            <section id="storeHead">
+                <div id="options">
+                    <h2>ESCOLHA O SEU</h2>
+                    
+                    <button class="storeOption" onclick="tudo()"><h3>ALL</h3></button>
+                    <button class="storeOption" onclick="boards()"><h3>BOARDS</h3></button>
+                    <button class="storeOption" onclick="trucks()"><h3>TRUCKS</h3></button>
+                    <button class="storeOption" onclick="wheels()"><h3>WHEELS</h3></button>
+                </div>
+
+            <div id="userSaves">
+                <img src="src/shopIcon.svg" id="carrinho" class="icon" onclick="indisponivel()">
+                <img src="src/favoritesIcon.svg"id="favoritos" class="icon" onclick="indisponivel()">
+            </div>
+            </section>
+
+    <!--area dos produtos-->
+    <section class="produtos" id="BestChoices">
+
+        <!--Best Choices-->
+        <h4 class="tituloh4" id="categoria">MELHORES<br>ESCOLHAS</h4>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <!--Produto01-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+                    
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span><br>
+                        </h3>
+
+                        <h3>
+                           <span class="sobreNome"></span> 
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto02-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto03-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto04-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto05-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto06-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Produto07-->
+                <div class="swiper-slide">
+                    <div class="favorites"></div>
+                    <img class="imagem">
+
+                    <div class="infosProdutos">
+                        <h3>
+                            <span class="nomeProduto"></span>
+                        </h3>
+
+                        <h3>
+                            <span class="sobreNome"></span>
+                        </h3>
+
+                        <h4>
+                            <span class="preco"></span>
+                        </h4>
+                    </div>
+
+                    <div class="buttonsOpitions">
+                        <button class="button">
+                            <span class="txtButton">COMPRAR</span>
+                        </button>
+                        <button class="button">
+                            <span class="txtButton">+CARRINHO</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+        <!--Ofertas Div-->
+        <img src="src/hotwekeends.svg" id="hotwekeends">
+        <section class="produtos" id="ofertas">
+        <h4 class="tituloh4">OFERTAS DA<br>SEMANA</h4>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!--Oferta 01-->
+                    <div class="swiper-slide">
+                        <div class="favorites"></div>
+                        <img class="imagem imagemOferta">
+                        <div class="infosProdutos">
+                            <h3>
+                                <span class="nomeProduto nomeOferta"></span>
+                            </h3>
+
+                            <h3>
+                                <span class="sobreNome sobreNomeOferta"></span>
+                            </h3>
+
+                            <h4>
+                                <span class="preco precoOferta"></span>
+                            </h4>
+                        </div>
+
+                        <div class="buttonsOpitions">
+                            <button class="button">
+                                <span class="txtButton">COMPRAR</span>
+                            </button>
+                            <button class="button">
+                                <span class="txtButton">+CARRINHO</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--Oferta 02-->
+                    <div class="swiper-slide ">
+                        <div class="favorites"></div>
+                        <img class="imagem imagemOferta">
+                        <div class="infosProdutos">
+                            <h3>
+                                <span class="nomeProduto nomeOferta"></span>
+                            </h3>
+
+                            <h3>
+                                <span class="sobreNome sobreNomeOferta"></span>
+                            </h3>
+
+                            <h4>
+                                <span class="preco precoOferta"></span>
+                            </h4>
+                        </div>
+
+                        <div class="buttonsOpitions">
+                            <button class="button">
+                                <span class="txtButton">COMPRAR</span>
+                            </button>
+                            <button class="button">
+                                <span class="txtButton">+CARRINHO</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--Oferta 03-->
+                    <div class="swiper-slide" style="background-color: ed">
+                        <div class="favorites"></div>
+                        <img class="imagem imagemOferta">
+                        <div class="infosProdutos">
+                            <h3>
+                                <span class="nomeProduto nomeOferta"></span>
+                            </h3>
+
+                            <h3>
+                                <span class="sobreNome sobreNomeOferta"></span>
+                            </h3>
+
+                            <h4>
+                                <span class="preco precoOferta"></span>
+                            </h4>
+                        </div>
+
+                        <div class="buttonsOpitions">
+                            <button class="button">
+                                <span class="txtButton">COMPRAR</span>
+                            </button>
+                            <button class="button">
+                                <span class="txtButton">+CARRINHO</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--Oferta 04-->
+                    <div class="swiper-slide">
+                        <div class="favorites"></div>
+                        <img class="imagem imagemOferta">
+                        <div class="infosProdutos">
+                            <h3>
+                                <span class="nomeProduto nomeOferta"></span>
+                            </h3>
+
+                            <h3>
+                                <span class="sobreNome sobreNomeOferta"></span>
+                            </h3>
+
+                            <h4>
+                                <span class="preco precoOferta"></span>
+                            </h4>
+                        </div>
+
+                        <div class="buttonsOpitions">
+                            <button class="button">
+                                <span class="txtButton">COMPRAR</span>
+                            </button>
+                            <button class="button">
+                                <span class="txtButton">+CARRINHO</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section id="galeria">
+        <h1>#VERT POR AI</h1>
+            <div id="galeriaInside">
+
+                <!--Photo 1-->
+                <div class="photoGalleryImages A">
+                    
+                    <div class="photoBackground">
+                        <div class="perfilProfile">
+                            <div class="instagranInfo">
+                                <img src="src/instagramIcon.svg" class="perfil">
+                                <h2>@Rafa.chunhaOficial</h2>
+                            </div>
+                            <div class="likes">
+                                <img src="src/heartIconFullWhite.svg" class="likes">
+                                <h2>2.5k</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Photo 2-->
+                <div class="photoGalleryImages B">
+
+                    <div class="photoBackground">
+                        <div class="perfilProfile">
+
+                            <div class="instagranInfo">
+                                <img src="src/instagramIcon.svg" class="perfil">
+                                <h2>@johnSK8</h2>
+                            </div>
+                            <div class="likes">
+                                <img src="src/heartIconFullWhite.svg" class="likes">
+                                <h2>85.3k</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+
+                <!--Photo 3-->
+                <div class="photoGalleryImages C">
+                    
+                    <div class="photoBackground">
+                        <div class="perfilProfile">
+
+                            <div class="instagranInfo">
+                                <img src="src/instagramIcon.svg" class="perfil">
+                                <h2>@Oliver.rayssa02</h2>
+                            </div>
+                            <div class="likes">
+                                <img src="src/heartIconFullWhite.svg" class="likes">
+                                <h2>55k</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Photo 4-->
+                <div class="photoGalleryImages D">
+
+                    <div class="photoBackground">
+                        <div class="perfilProfile">
+                            <div class="instagranInfo">
+                                <img src="src/instagramIcon.svg" class="perfil">
+                                <h2>@rod_Santalem</h2>
+                            </div>
+                            <div class="likes">
+                                <img src="src/heartIconFullWhite.svg" class="likes">
+                                <h2>1.5k</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Photo 5-->
+                <div class="photoGalleryImages E">
+                    
+                    <div class="photoBackground">
+                        <div class="perfilProfile">
+                            <div class="instagranInfo">
+                                <img src="src/instagramIcon.svg" class="perfil">
+                                <h2>@Lucas.Streetboard</h2>
+                            </div>
+                            <div class="likes">
+                                <img src="src/heartIconFullWhite.svg" class="likes">
+                                <h2>75k</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <h6 style="margin-bottom: 1%;">&copy;Projeto conceitual para fins de estudo. Detalhes no README</h6>
+            </footer>
+        </section>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<script src="javaScript/data.js"></script>
+<script src="javaScript/index.js"></script>
+<script src="javaScript/swiper.js"></script>
+<script src="javaScript/indisponivel.js"></script>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>

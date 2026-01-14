@@ -1,0 +1,109 @@
+#store{
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(to right,#e3e3e3,#b7b7b7);
+}
+#storeChild{
+    background-color: #f4f4f4;
+    margin: 5% auto ;
+    box-shadow: rgba(0, 0, 0, 0.386) 5px 5px 20px 5px;
+    width: 85vw;
+    border-radius: 25px;
+}
+#storeHead{
+    justify-content: space-between;
+    display: flex;
+    margin: 0% 5% 0%;
+    height: 5%;
+    align-items: center;
+}
+#options{
+    font-weight: 100;
+    color: var(--cinzaSubtitulo);
+    font-family: "Open Sans", sans-serif;
+    width: 75%;
+    gap: 5%;
+    display: flex;
+}
+.storeOption h3{
+    font-weight: 100;
+    font-size: clamp(0.5rem, 1.5vw, 3rem);
+}
+.storeOption{
+    color: var(--cinzaSubtitulo);
+    background: none;
+    border: none;
+    padding: 0;
+}
+#userSaves{
+    justify-content: end;
+    gap: 5%;
+    display: flex;
+    width: 35%;
+    height: 100%;
+}
+#userSaves img{
+    width: 7%;
+}
+.icon:hover{
+    cursor: pointer;
+    filter: brightness(50%);
+}
+.storeOption.selected h3{
+    color: rgb(48, 48, 48);
+}
+.storeOption:hover{
+    cursor: pointer;
+    color: red;
+}
+#hotwekeends{
+    width: 15vw;
+}
+#ofertas{
+    .tituloh4{
+        color: whitesmoke;
+    }
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+/*-------------------------------------------Mobile-------------------------------------*/
+    @media (max-width:760px){
+        #options{
+            width: 85%;
+            gap: 3%;
+            font-size: 7px;
+        }
+        .storeOption{
+            font-size: 7px;
+        }
+        #userSaves{
+            height: 25%;
+            width: 15%;
+        }
+        #userSaves img{
+            width: 3vw;
+        }
+    }
+    .tituloh4{
+        font-size: 1.5vh;
+    }
+/*----------------------------------------Tablet--------------------------------*/
+    @media (min-width: 761px) and (max-width:1000px){
+        #options{
+            width: 85%;
+            gap: 3%;
+            font-size: 7px;
+        }
+        #userSaves img{
+            width: 3vw;
+        }
+    }
+
+/*-------------------------------Landscape--------------------*/
+    @media (orientation: landscape) and (max-width: 900px){
+        #userSaves img{
+            width: 2vw;
+    }
+}

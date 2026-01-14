@@ -1,0 +1,675 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cinzaSubtitulo: #737373;
+  --vermelhoVivo: #ff0000;
+  --preto: #1D1D1D;
+  --cinzaClaro: #f2f2f2 ;
+}
+
+#header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 8%;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+#headerLogo {
+  height: 120%;
+}
+
+#shopIcon {
+  transition: 0.1s ease-in-out;
+  margin-right: 1.5%;
+  height: 50%;
+}
+
+#shopIcon:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../src/fundoSkate.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+#heroSection {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 90vh;
+  width: 90vw;
+}
+
+#headline {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#headline .homeButtons {
+  justify-content: space-between;
+  display: flex;
+  height: 50%;
+  width: 90%;
+}
+#headline .headlineButtons {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150%;
+  border-radius: 50px;
+  border: 0;
+  background-color: red;
+  width: 49%;
+  height: 20%;
+}
+#headline .headlineButtons a {
+  padding: 6%;
+  color: white;
+}
+#headline .headlineButtons:last-child {
+  background-color: white;
+}
+#headline .headlineButtons:last-child a {
+  color: red;
+}
+#headline .headlineButtons:last-child:hover {
+  background-color: rgb(225, 225, 225);
+}
+#headline .headlineButtons:hover {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: rgb(158, 1, 1);
+  box-shadow: 0 10px 30px black;
+}
+
+a {
+  text-decoration: none;
+}
+
+#headline h1 {
+  color: white;
+  margin: 9rem 1rem 0rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 15vh, 10rem);
+}
+
+#skate3dPai {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+
+#skate {
+  height: 100%;
+}
+
+/*-------------------------------------------Mobile-------------------------------------*/
+@media (max-width: 760px) {
+  #heroSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  #headline {
+    margin: 10% auto;
+  }
+  #headline h1 {
+    width: 100%;
+    font-size: 6vh;
+  }
+  #skate {
+    height: 100%;
+  }
+  #skate3dPai {
+    height: 80%;
+    display: flex;
+    margin: 0;
+    width: 30%;
+  }
+  #headline.homeButtons {
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #headline .headlineButtons {
+    display: flex;
+    height: 10%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 70%;
+  }
+}
+/*-------------------------------Tablet--------------------*/
+@media (min-width: 761px) and (max-width: 1000px) {
+  #heroSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  #headline {
+    margin: 10% auto;
+  }
+  #headline h1 {
+    width: 100%;
+    font-size: 6vh;
+  }
+  #skate {
+    height: 100%;
+  }
+  #skate3dPai {
+    height: 80%;
+    display: flex;
+    margin: 0;
+    width: 30%;
+  }
+  #headline.homeButtons {
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #headline.headlineButtons {
+    display: flex;
+    height: 10%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 70%;
+  }
+}
+/*-------------------------------Landscape--------------------*/
+@media (orientation: landscape) and (max-width: 900px) {
+  #heroSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  #skate3dPai {
+    margin: auto;
+  }
+  #headline {
+    margin: 0;
+  }
+  #headline h1 {
+    width: 100%;
+    font-size: 7vw;
+  }
+  #skate {
+    height: 100%;
+  }
+  #headline .headlineButtons {
+    font-size: 10px;
+  }
+}
+#store {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(to right, #e3e3e3, #b7b7b7);
+}
+
+#storeChild {
+  background-color: #f4f4f4;
+  margin: 5% auto;
+  box-shadow: rgba(0, 0, 0, 0.386) 5px 5px 20px 5px;
+  width: 85vw;
+  border-radius: 25px;
+}
+
+#storeHead {
+  justify-content: space-between;
+  display: flex;
+  margin: 0% 5% 0%;
+  height: 5%;
+  align-items: center;
+}
+
+#options {
+  font-weight: 100;
+  color: var(--cinzaSubtitulo);
+  font-family: "Open Sans", sans-serif;
+  width: 75%;
+  gap: 5%;
+  display: flex;
+}
+
+.storeOption h3 {
+  font-weight: 100;
+  font-size: clamp(0.5rem, 1.5vw, 3rem);
+}
+
+.storeOption {
+  color: var(--cinzaSubtitulo);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#userSaves {
+  justify-content: end;
+  gap: 5%;
+  display: flex;
+  width: 35%;
+  height: 100%;
+}
+
+#userSaves img {
+  width: 7%;
+}
+
+.icon:hover {
+  cursor: pointer;
+  filter: brightness(50%);
+}
+
+.storeOption.selected h3 {
+  color: rgb(48, 48, 48);
+}
+
+.storeOption:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#hotwekeends {
+  width: 15vw;
+}
+
+#ofertas {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+#ofertas .tituloh4 {
+  color: whitesmoke;
+}
+
+/*-------------------------------------------Mobile-------------------------------------*/
+@media (max-width: 760px) {
+  #options {
+    width: 85%;
+    gap: 3%;
+    font-size: 7px;
+  }
+  .storeOption {
+    font-size: 7px;
+  }
+  #userSaves {
+    height: 25%;
+    width: 15%;
+  }
+  #userSaves img {
+    width: 3vw;
+  }
+}
+.tituloh4 {
+  font-size: 1.5vh;
+}
+
+/*----------------------------------------Tablet--------------------------------*/
+@media (min-width: 761px) and (max-width: 1000px) {
+  #options {
+    width: 85%;
+    gap: 3%;
+    font-size: 7px;
+  }
+  #userSaves img {
+    width: 3vw;
+  }
+}
+/*-------------------------------Landscape--------------------*/
+@media (orientation: landscape) and (max-width: 900px) {
+  #userSaves img {
+    width: 2vw;
+  }
+}
+.produtos {
+  width: 100%;
+  margin: auto;
+}
+.produtos .tituloh4 {
+  margin: 5% 4% 0%;
+  font-family: "Open Sans", sans-serif;
+  color: var(--cinzaSubtitulo);
+}
+
+.swiper {
+  box-sizing: border-box;
+  --swiper-navigation-color: var(--cinzaSubtitulo);
+  --swiper-pagination-color: red;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  opacity: 1;
+  background-color: white;
+  height: 85% !important;
+  border-radius: 20px;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.547);
+}
+
+.imagem {
+  display: flex;
+  width: 50%;
+  height: 60%;
+  margin: auto;
+}
+
+.favorites {
+  transition: 0.2s ease-in-out;
+  background-image: url(../src/favoriteIconStroke.svg);
+  background-size: cover;
+  background-position: center;
+  margin: 5%;
+  height: 5%;
+  width: 9%;
+}
+
+.favorites:hover {
+  cursor: pointer;
+  background-image: url(../src/favoriteIconHover.svg);
+}
+
+.infosProdutos {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 95%;
+  height: auto;
+}
+.infosProdutos h3 {
+  font-family: "League Spartan";
+  color: var(--preto);
+}
+.infosProdutos h4 {
+  font-family: "League Spartan";
+  color: var(--cinzaSubtitulo);
+}
+.infosProdutos button {
+  width: 40%;
+  display: flex;
+}
+.infosProdutos .nomeOferta,
+.infosProdutos .sobreNomeOferta {
+  color: rgb(0, 0, 0);
+}
+.infosProdutos .precoOferta {
+  color: red;
+}
+
+.buttonsOpitions {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  height: 100%;
+  width: 100%;
+  margin: 2%;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid var(--preto);
+  overflow: hidden;
+  border-radius: 30px;
+  color: var(--preto);
+  transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.txtButton {
+  margin: auto;
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  color: red !important;
+  top: 50%;
+}
+
+span {
+  display: inline;
+}
+
+footer {
+  color: var(--preto);
+  display: flex;
+  justify-content: center;
+}
+
+/*-------------------------------------------Mobile-------------------------------------*/
+@media (max-width: 760px) {
+  .favorites {
+    width: 8%;
+    height: 4%;
+  }
+}
+/*---------------------LandScape---------------------------------------------------*/
+@media (orientation: landscape) and (max-width: 900px) {
+  .swiper-slide .favorites {
+    width: 4%;
+    height: 4%;
+    background-size: cover;
+  }
+  .infosProdutos {
+    margin: 0%;
+  }
+  .infosProdutos h3 {
+    margin-left: 2%;
+    font-size: 12px;
+  }
+  .infosProdutos h4 {
+    margin-left: 2%;
+    font-size: 10px;
+  }
+  .button {
+    margin: 0;
+    height: 5vh;
+  }
+  .button .txtButton {
+    font-size: 9px;
+  }
+  .imagem {
+    height: 50%;
+  }
+  .button {
+    width: 30%;
+  }
+}
+/*----------------------------------------Tablet--------------------------------*/
+@media (min-width: 761px) and (max-width: 1000px) {
+  .favorites {
+    width: 8%;
+    height: 4%;
+  }
+}
+#galeria {
+  animation: view 1s ease-in-out;
+  animation-timeline: view();
+  font-family: "League Spartan";
+  background-color: var(--cinzaClaro);
+  width: 100%;
+  margin-bottom: 8%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  animation-range: entry 0% cover 100%;
+  /* mobile */
+}
+@media (max-width: 768px) {
+  #galeria {
+    margin-bottom: 20%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "A" "B" "C" "D" "E";
+  }
+}
+
+#galeria h1 {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: var(--preto);
+}
+
+#galeria {
+  /*Mobile*/
+}
+@media (max-width: 760px) {
+  #galeria h1 {
+    font-size: 25px;
+  }
+}
+
+@keyframes view {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+#galeriaInside {
+  min-height: 100vh;
+  margin: 1%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: "A A B" "C D E";
+  gap: 1rem;
+  /* áreas */
+  /* mobile */
+}
+#galeriaInside .A {
+  grid-area: A;
+}
+#galeriaInside .B {
+  grid-area: B;
+}
+#galeriaInside .C {
+  grid-area: C;
+}
+#galeriaInside .D {
+  grid-area: D;
+}
+#galeriaInside .E {
+  grid-area: E;
+}
+@media (max-width: 768px) {
+  #galeriaInside {
+    grid-template-columns: 1fr;
+    grid-template-areas: "A" "B" "C" "D" "E";
+  }
+}
+
+#galeriaInside > div:first-child {
+  background-image: url(../src/skatewallpaper1.svg);
+}
+
+#galeriaInside > div:nth-child(2) {
+  background-image: url(../src/skatewallpaper2.svg);
+}
+
+#galeriaInside > div:nth-child(3) {
+  background-image: url(../src/skateGirl.svg);
+}
+
+#galeriaInside > div:nth-child(4) {
+  background-image: url(../src/rodSkate.svg);
+}
+
+#galeriaInside > div:nth-child(5) {
+  background-image: url(../src/lucasSkate.svg);
+}
+
+.photoGalleryImages {
+  background-size: cover;
+  background-position: center;
+}
+
+.photoBackground {
+  transition: 0.2s ease-in-out;
+}
+
+.instagranInfo {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+.instagranInfo h2 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.photoGalleryImages:hover .photoBackground {
+  background-color: rgba(0, 0, 0, 0.757);
+}
+.photoGalleryImages:hover .instagranInfo {
+  opacity: 1;
+}
+.photoGalleryImages:hover .perfilProfile .likes {
+  opacity: 1;
+}
+
+.photoBackground {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.perfilProfile {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  width: 30%;
+  height: 50%;
+  margin: 0 auto;
+  /*Mobile*/
+}
+.perfilProfile img {
+  width: 2vw;
+}
+.perfilProfile .likes {
+  align-self: center;
+  margin-top: auto;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .perfilProfile img {
+    width: 6vw;
+  }
+}/*# sourceMappingURL=index.css.map */

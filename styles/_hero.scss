@@ -1,0 +1,171 @@
+#heroSection{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 90vh;
+    width: 90vw;
+}
+#headline{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .homeButtons{
+        justify-content: space-between;
+        display: flex;
+        height: 50%;
+        width: 90%;
+    }
+    .headlineButtons{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 150%;
+        border-radius: 50px;
+        border: 0;
+        background-color: red ;
+        width: 49%;
+        height: 20%;
+
+        a{  
+            padding: 6%;
+            color: white;
+        }
+     }
+     .headlineButtons:last-child{
+        background-color: white;
+        a{
+            color: red;
+        }
+
+     }
+     .headlineButtons:last-child:hover{
+        background-color: rgb(225, 225, 225);
+     }
+     .headlineButtons:hover{
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        background-color: rgb(158, 1, 1);
+        box-shadow: 0 10px 30px black;
+     }
+
+}
+a{
+    text-decoration: none;
+}
+#headline h1{
+  color: white;
+  margin: 9rem 1rem 0rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 15vh, 10rem);
+}
+#skate3dPai{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+#skate{
+    height: 100%;
+}
+
+
+
+/*-------------------------------------------Mobile-------------------------------------*/
+    @media (max-width:760px){
+        #heroSection{
+            display: flex;
+            justify-content: space-between;
+        }
+        #headline{
+            margin: 10% auto;
+        }
+        #headline h1{
+            width: 100%;
+            font-size: 6vh;
+        }
+        #skate{
+            height: 100%;
+        }
+        #skate3dPai{
+            height: 80%;
+            display: flex;
+            margin: 0;
+            width: 30%;
+        }
+        #headline.homeButtons{
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #headline .headlineButtons{
+            display: flex;
+            height: 10%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 70%;
+        }
+    }
+    /*-------------------------------Tablet--------------------*/
+    @media (min-width: 761px) and (max-width:1000px){
+        #heroSection{
+            display: flex;
+            justify-content: space-between;
+        }
+        #headline{
+            margin: 10% auto;
+        }
+        #headline h1{
+            width: 100%;
+            font-size: 6vh;
+        }
+        #skate{
+            height: 100%;
+        }
+        #skate3dPai{
+            height: 80%;
+            display: flex;
+            margin: 0;
+            width: 30%;
+        }
+        #headline.homeButtons{
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #headline.headlineButtons{
+            display: flex;
+            height: 10%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 70%;
+        }
+    }
+    /*-------------------------------Landscape--------------------*/
+    @media (orientation: landscape) and (max-width: 900px){
+        #heroSection{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #skate3dPai{
+            margin: auto;
+        }
+        #headline{
+            margin: 0;
+        }
+        #headline h1{
+            width: 100%;
+            font-size: 7vw;
+        }
+        #skate{
+            height: 100%;
+        }
+        #headline .headlineButtons{
+            font-size: 10px;
+        }
+    }

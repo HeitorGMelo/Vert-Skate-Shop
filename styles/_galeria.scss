@@ -1,0 +1,160 @@
+#galeria{
+    animation: view 1s ease-in-out;
+    animation-timeline: view();
+    font-family: 'League Spartan';
+    background-color: var(--cinzaClaro);
+    width: 100%;
+    margin-bottom: 8%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    animation-range: entry 0% cover 100% ;
+
+   /* mobile */
+  @media (max-width:768px) {
+    margin-bottom: 20%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "A"
+      "B"
+      "C"
+      "D"
+      "E";
+      }
+}
+#galeria h1{
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        color: var(--preto);
+
+}
+#galeria{
+    /*Mobile*/
+    @media(max-width:760px){
+        h1{
+            font-size: 25px;
+        }
+    }
+}
+@keyframes view{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+}
+#galeriaInside {
+  min-height: 100vh;
+  margin: 1%;
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "A A B"
+    "C D E";
+
+  gap: 1rem;
+
+  /* áreas */
+  .A { grid-area: A; }
+  .B { grid-area: B; }
+  .C { grid-area: C; }
+  .D { grid-area: D; }
+  .E { grid-area: E; }
+
+  /* mobile */
+  @media (max-width:768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "A"
+      "B"
+      "C"
+      "D"
+      "E";
+  }
+}
+#galeriaInside > div:first-child{
+    background-image: url(../src/skatewallpaper1.svg);
+}
+#galeriaInside > div:nth-child(2){
+    background-image: url(../src/skatewallpaper2.svg);
+}
+#galeriaInside > div:nth-child(3){
+    background-image: url(../src/skateGirl.svg);
+}
+#galeriaInside > div:nth-child(4){
+    background-image: url(../src/rodSkate.svg);
+}
+#galeriaInside > div:nth-child(5){
+    background-image: url(../src/lucasSkate.svg);
+}
+.photoGalleryImages{
+    background-size: cover;
+    background-position: center;
+}
+.photoBackground{
+    transition: 0.2s ease-in-out;
+}
+.instagranInfo{
+    h2{ 
+        color: white;
+        font-size: 1.2rem;
+    }
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.photoGalleryImages:hover{
+    .photoBackground{
+        background-color: rgba(0, 0, 0, 0.757);
+    }
+    .instagranInfo{
+        opacity: 1;
+    }
+.perfilProfile{
+        .likes{
+            opacity: 1;
+        }
+    }
+}
+.photoBackground{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+.perfilProfile{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+
+    img{
+        width: 2vw;
+    }
+
+    .likes{
+        align-self: center;
+        margin-top: auto;
+        transition:opacity 0.5s ease-in-out;
+        opacity: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    /*Mobile*/
+    @media (max-width:760px) {
+        img{
+            width: 6vw;
+        }
+
+  }
+}
