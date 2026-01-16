@@ -589,23 +589,23 @@ footer {
 }
 
 #galeriaInside > div:first-child {
-  background-image: url(../src/skatewallpaper1.svg);
+  background-image: url("./src/skatewallpaper1.svg");
 }
 
 #galeriaInside > div:nth-child(2) {
-  background-image: url(../src/skatewallpaper2.svg);
+  background-image: url("./src/skatewallpaper2.svg");
 }
 
 #galeriaInside > div:nth-child(3) {
-  background-image: url(../src/skateGirl.svg);
+  background-image: url("./src/skateGirl.svg");
 }
 
 #galeriaInside > div:nth-child(4) {
-  background-image: url(../src/rodSkate.svg);
+  background-image: url("./src/rodSkate.svg");
 }
 
 #galeriaInside > div:nth-child(5) {
-  background-image: url(../src/lucasSkate.svg);
+  background-image: url("./src/lucasSkate.svg");
 }
 
 .photoGalleryImages {
